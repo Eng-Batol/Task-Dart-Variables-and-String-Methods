@@ -22,16 +22,14 @@ void main() {
   int number2 = number + number;
   print("$number + $number is equal to $number2 ");
 
-  String fullName = "  John doe";
-// My name is  JOHN and my last name length is 3
-
-  String firstNameOnly = fullName
-      .trim(); //we use the trim method to remove the whitespace at the start and end of the string. This method returns a new string, which will be stored in trimmedString.
-  print(firstNameOnly);
-  String splitName = "";
-  print(splitName);
-  String splitted = fullName.split(' ').elementAt(3);
-  print(splitted);
-  print(splitted.length);
-  print(fullName.contains("doe"));
+  String fullname = " John doe";
+  fullname = fullname.trim();
+  print(fullname.trim()); // to remove the spce
+  List<String> arrayname = fullname.split(' '); //
+  String fName = arrayname[0];
+  String lName = arrayname[1];
+  print(
+      "my name is $lName and my lastname lenth is ${lName.length}"); // to add the .leanth we have to wrap the var with {}
+  bool startWithd = lName.startsWith('d');
+  print(startWithd);
 }
